@@ -7,7 +7,7 @@ const Header = () => {
     const itemslength = items.length;
 
     return (
-        <div className="flex items-center gap-3 sm:gap-5 text-lg sm:text-xl px-2 fixed w-full sm:px-5 py-2 bg-gray-300 ">
+        <div className="flex items-center gap-3 sm:gap-5 text-[14px] sm:text-xl px-2 fixed w-full sm:px-5 py-2 bg-gray-300 ">
             <Link className="hover:text-green-500" to="/">Home  </Link>
             <Link className="hover:text-green-500" to="cart">Cart  </Link>
             <Link className="hover:text-green-500" to="add-product">Add Product  </Link>

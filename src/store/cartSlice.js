@@ -12,8 +12,8 @@ export const cartSlice = createSlice({
             state.items.push({ id: nanoid(), img: img, price: price, title: title });
         },
         removeItemsFromCart: (state, action) => {
-            return state.items.filter((e) => e.id !== action.payload);
-        },
+    state.items = state.items.filter((item) => item.id !== action.payload);
+},
         setTotal: (state) => {
             const totalPrice = state.items.reduce((accumulator, item) => {
                 return accumulator + parseInt(item.price);

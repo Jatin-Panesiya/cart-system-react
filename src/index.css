@@ -1,0 +1,7 @@
+@media (max-width:350px){
+    .responsive{
+        border-style: none;
+        padding: 5px;
+        gap: 0;
+    }
+}

@@ -20,7 +20,7 @@ const Home = () => {
                                 <img src={data.img} alt={data.title} className="w-64 h-64  rounded" />
                                 <div className="flex items-center gap-5 justify-center text-xl">
                                     <h3>{data.title}</h3>
-                                    <p>{data.price}</p>
+                                    <p>{data.price}$</p>
                                 </div>
                                 <div className="flex items-center gap-5 justify-center my-2">
                                     <button onClick={() => handleCart(data.id)} className="bg-blue-500 rounded px-5 py-1 text-white">Add to Cart</button>
