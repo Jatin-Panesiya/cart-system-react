@@ -18,7 +18,7 @@ const InputData = () => {
 
     return (
         <div className="py-20">
-            <div className=" bg-green-400 py-5  w-60 sm:w-96 m-auto  sm:px-10 rounded-xl ">
+            <div className=" bg-green-400 py-5  sm:w-96 m-auto  sm:px-10 rounded-xl ">
                 <div className="grid ">
                     <input type="text" value={inputData.title} name="title" onChange={handleInput} placeholder="Enter Product Name " className="border border-black m-2 px-5 rounded py-1" />
                     <input type="text" value={inputData.img} name="img" onChange={handleInput} placeholder="Enter Image Link " className="border border-black m-2 px-5 rounded py-1" />
