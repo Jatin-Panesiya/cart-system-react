@@ -5,13 +5,13 @@ const Home = () => {
 
     const dispatch = useDispatch()
     const homeData = useSelector((state) => state.home)
-    
+
     const handleCart = (id) => {
         const item = homeData.find((e) => e.id === id)
         dispatch(addItemsToCart(item))
     }
     return (
-
+        homeData.length > 0 ?
             <div className="flex gap-5 py-28 flex-wrap sm:justify-normal justify-center">
                 {
                     homeData.map((data) => {
@@ -31,7 +31,9 @@ const Home = () => {
                     })
                 }
 
-            </div>
+            </div> :
+
+            <div className="py-20"> <h1 className="bg-slate-300 text-center py-5 text-xl ">No Items in Shop</h1> </div>
 
     )
 }

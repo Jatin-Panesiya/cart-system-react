@@ -1,10 +1,8 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-const localData = JSON.parse(localStorage.getItem("data"))
-console.log(localData)
+const localData = JSON.parse(localStorage.getItem("data")) || { items: [], totalPrice: 0 }
 export const cartSlice = createSlice({
     name: "cart",
-    initialState: localData
-    ,
+    initialState: localData,
     reducers: {
         addItemsToCart: (state, action) => {
             const { img, price, title } = action.payload;
@@ -29,3 +27,4 @@ const setLocalData = (state) => {
 }
 export const { addItemsToCart, removeItemsFromCart, setTotal } = cartSlice.actions;
 export default cartSlice.reducer;
+

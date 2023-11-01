@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
 import InputData from "./InputData";
+import RemoveItems from "./RemoveItems";
 
 
 
 const ManageProduct = ()=>{
         return(
             <div className="py-20">
-            <Link to={'add-product'} >Add Product</Link>
+            <InputData/>
+            <RemoveItems/>
             </div>
         )
 }

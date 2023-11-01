@@ -17,13 +17,14 @@ const InputData = () => {
     }
 
     return (
-        <div className="py-20">
-            <div className=" bg-green-400 py-5  sm:w-96 m-auto  sm:px-10 rounded-xl ">
-                <div className="grid ">
+        <div className="py-0 sm:py-10 ">
+        <h1 className="text-center py-2 font-bold text-xl">Add Items</h1>
+            <div className=" bg-green-400 py-5  m-auto  sm:px-10 rounded-xl mx-5 ">
+                <div className="grid sm:flex flex-wrap justify-center items-center">
                     <input type="text" value={inputData.title} name="title" onChange={handleInput} placeholder="Enter Product Name " className="border border-black m-2 px-5 rounded py-1" />
                     <input type="text" value={inputData.img} name="img" onChange={handleInput} placeholder="Enter Image Link " className="border border-black m-2 px-5 rounded py-1" />
                     <input type="text" value={inputData.price} name="price" onChange={handleInput} placeholder="Enter Price " className="border border-black m-2 px-5 rounded py-1" />
-                    <button onClick={handleAdd} className="bg-blue-500 text-white mx-2 py-1 rounded">Add</button>
+                    <button onClick={handleAdd} className="bg-blue-500 text-white px-5 mx-2 rounded py-1">Add</button>
                 </div>
 
             </div>

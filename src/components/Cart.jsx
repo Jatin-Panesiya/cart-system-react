@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
 import { removeItemsFromCart, setTotal } from "../store/cartSlice";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Cart = () => {
   const { items, totalPrice } = useSelector((state) => state.cart);
@@ -12,12 +12,12 @@ const Cart = () => {
   
   useEffect(() => {
     dispatch(setTotal(items))
-  }, [items, dispatch])
+  }, [items,dispatch])
 
-  const [remove, setRemove] = useState(false)
   return (
     <div>
-      {items.length > 0 ?
+    
+    {items.length > 0 ?
         <div className="grid gap-5 px-3 py-20">
           {
             items.map((items) => {
@@ -32,7 +32,8 @@ const Cart = () => {
                   </div>
 
                   <div className="flex items-center gap-5 justify-center my-2">
-                    <button className={`bg-red-500  rounded px-5 py-1 text-white`} onClick={() => handleRemove(items.id)}>{remove ? "Remove" : "X"}</button>
+                    <button className={`bg-red-500 sm:flex hidden  rounded px-5 py-1 text-white`} onClick={() => handleRemove(items.id)}>Remove</button>
+                    <button className={`bg-red-500 sm:hidden flex  rounded px-5 py-1 text-white`} onClick={() => handleRemove(items.id)}>X</button>
                   </div>
                 </div>
 
