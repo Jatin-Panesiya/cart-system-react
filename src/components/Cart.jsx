@@ -9,9 +9,11 @@ const Cart = () => {
   const handleRemove = (id) => {
     dispatch(removeItemsFromCart(id));
   }
+  
   useEffect(() => {
     dispatch(setTotal(items))
   }, [items, dispatch])
+
   const [remove, setRemove] = useState(false)
   return (
     <div>
