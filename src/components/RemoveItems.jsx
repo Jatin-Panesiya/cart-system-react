@@ -1,8 +1,6 @@
 import { useSelector,useDispatch } from "react-redux"
 import { removeItem } from "../store/homeSlice";
 
-
-
 const RemoveItems = () => {
     const items = useSelector((state) => state.home)
     const dispatch = useDispatch();

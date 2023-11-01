@@ -12,7 +12,7 @@ const Home = () => {
     }
     return (
         homeData.length > 0 ?
-            <div className="flex gap-5 py-28 flex-wrap sm:justify-normal justify-center">
+            <div className="flex gap-5 py-12 flex-wrap sm:justify-normal justify-center">
                 {
                     homeData.map((data) => {
                         return (

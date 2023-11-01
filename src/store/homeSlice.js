@@ -9,11 +9,10 @@ try {
 export const homeSlice = createSlice({
     name: 'home',
     initialState: localData,
-
     reducers: {
         addToCart: (state, action) => {
             const { title, img, price } = action.payload
-            state.push({ id: nanoid(), img: img, title: title, price: price })
+            state.push({ id: nanoid(), img: img, title: title, price: price,count:0 })
             setLocalData(JSON.stringify(state))
         },
         removeItem: (state, action) => {
@@ -21,9 +20,9 @@ export const homeSlice = createSlice({
             setLocalData(JSON.stringify(newState))
             return newState
         }
-
     }
 })
+
 const setLocalData = (state) => {
     localStorage.setItem("items", state)
 }
